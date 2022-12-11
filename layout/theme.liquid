@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page_title }}{%- if current_tags %}
+        &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %}
+        &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %}
+        &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}" type="text/css">
+    {% comment %} <link rel="stylesheet" href="{{ 'elegant-icons.css' | asset_url }}" type="text/css"> {% endcomment %}
+    {%- comment -%}
+      <link rel="stylesheet" href="{{ 'font-awesome.min.css' | asset_url }}" type="text/css">
+    {%- endcomment -%}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{{ 'jquery-ui.min.css' | asset_url }}" type="text/css">
+    <link rel="stylesheet" href="{{ 'nice-select.css' | asset_url }}" type="text/css">
+    <link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}" type="text/css">
+    <link rel="stylesheet" href="{{ 'slicknav.min.css' | asset_url }}" type="text/css">
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" type="text/css">
+    {{ content_for_header }}
+  </head>
+  <body>
+    {{content_for_layout}}
+    <!-- Js Plugins -->
+    <script src="{{ 'jquery-3.3.1.min.js' | asset_url }}"></script>
+    <script src="{{ 'bootstrap.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.nice-select.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.slicknav.js' | asset_url }}"></script>
+    <script src="{{ 'owl.carousel.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery-ui.min.js' | asset_url }}"></script>
+    <script src="{{ 'main.js' | asset_url }}"></script>
+    <script src="{{ 'mixitup.min.js' | asset_url }}"></script>
+
+  </body>
+</html>
